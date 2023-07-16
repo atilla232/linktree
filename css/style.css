@@ -1,0 +1,153 @@
+@font-face {
+  font-family: "bebasneue";
+  src: url(../font/Bebas_Neue/BebasNeue-Regular.ttf);
+}
+@font-face {
+  font-family: "exo_2regular";
+  src: url(../font/exo2-variablefont_wght-webfont.woff2) format("woff2"),
+    url(../font/exo2-variablefont_wght-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* body */
+body {
+  font-size: 16px/28px;
+  font-family: "exo_2regular", "bebasneue", arial, sans-serif;
+  background: rgb(193, 83, 186);
+  background: linear-gradient(
+    329deg,
+    rgba(255, 0, 236, 1) 0%,
+    rgba(208, 21, 240, 1) 15%,
+    rgba(205, 22, 240, 1) 16%,
+    rgba(84, 29, 213, 1) 37%,
+    rgba(0, 33, 194, 1) 53%,
+    rgba(0, 103, 234, 1) 72%,
+    rgba(0, 112, 255, 1) 82%,
+    rgba(0, 251, 252, 1) 100%
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  background-size: 100vw 100vh;
+}
+/* photo profil */
+
+.foto {
+  margin: 50px auto;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid lightgray;
+}
+
+/* style  */
+
+.main {
+  position: relative;
+  max-width: 100%;
+  padding-left: 25px;
+  padding-right: 35px;
+  margin-bottom: 35px;
+}
+.container {
+  max-width: 100%;
+  display: flex;
+  position: relative;
+  margin: auto;
+  width: 450px;
+  height: 100px;
+  background-color: rgba(183, 183, 183, 0.2);
+  border-radius: 10px;
+  border: 2px solid lightgray;
+  box-shadow: 0px 0px 24px -4px rgba(0, 0, 0, 0.43);
+  -webkit-box-shadow: 0px 0px 24px -4px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: 0px 0px 24px -4px rgba(0, 0, 0, 0.43);
+  transition: 300ms;
+  box-sizing: border-box;
+}
+
+.container:hover {
+  transform: scale(1.05);
+}
+.container img {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  height: 52;
+  width: 52;
+  object-fit: cover;
+}
+
+.container h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 35px;
+  color: white;
+  letter-spacing: 3px;
+}
+.container .link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%; /* Mengubah lebar maksimum saat tampilan mobile */
+    padding: 0 10px; /* Mengubah margin kanan dan kiri saat tampilan mobile */
+  }
+
+  .container img {
+    top: 30%;
+    height: 42px;
+    width: 42px;
+    object-fit: cover;
+  }
+  .container h3 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 320px) {
+  .container img {
+    top: 30%;
+    height: 42px;
+    width: 42px;
+    object-fit: cover;
+  }
+  .container h3 {
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 165px) {
+  .container {
+    max-width: 100%; /* Mengubah lebar maksimum saat tampilan mobile */
+    max-height: 100%;
+    max-height: 50%;
+    padding: 0 10px; /* Mengubah margin kanan dan kiri saat tampilan mobile */
+  }
+  .container img {
+    position: absolute;
+    top: 10px;
+    left: 33%;
+    height: 34px;
+    width: 34px;
+    object-fit: cover;
+  }
+  .container h3 {
+    top: 60px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+}
